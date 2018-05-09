@@ -31,6 +31,7 @@ USER jupyter
 WORKDIR /home/jupyter
 
 RUN mkdir data
+VOLUME /home/jupyter/data
 
 EXPOSE 8888
 
