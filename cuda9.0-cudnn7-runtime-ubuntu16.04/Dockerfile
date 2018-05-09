@@ -10,11 +10,12 @@ RUN \
     add-apt-repository ppa:jonathonf/python-3.6 && \
     apt-get update -y && \
     apt-get install -y \ 
+        libgomp1 \
         python3.6 && \
     wget https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
     apt-get purge -y ${build_deps} && \
-    apt-get clean && \
+    apt-get autoclean && \
     rm -rf get-pip.py /var/lib/apt/lists/* 
 
 # install jupyter
